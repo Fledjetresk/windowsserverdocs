@@ -57,7 +57,7 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
 |/o|Copies file ownership and discretionary access control list (DACL) information.|
 |/x|Copies file audit settings and system access control list (SACL) information (implies **/o**).|
 |/exclude:FileName1[+[FileName2][+[FileName3]( \)]|Specifies a list of files. At least one file must be specified. Each file will contain search strings with each string on a separate line in the file.</br>When any of the strings match any part of the absolute path of the file to be copied, that file will be excuded from being copied. For example, specifying the string **obj** will exclude all files underneath the directory **obj** or all files with the **.obj** extension.|
-|/y|Suppresses prompting to confirm that you want to overwrite an existing destination file.|
+|/y|Suppresses prompting to confirm that you want to overwrite an existing destination file (thus will silently overwrite destination file(s)).|
 |/-y|Prompts to confirm that you want to overwrite an existing destination file.|
 |/z|Copies over a network in restartable mode.|
 |/b|Copies the symbolic link instead of the files. This parameter was introduced in Windows Vista®.|
@@ -83,7 +83,7 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
     If you omit *Destination*, the **xcopy** command copies the files to the current directory.
 -   Specifying whether *Destination* is a file or directory
 
-    If *Destination* does not contain an existing directory and does not end with a backslash (\), the following message appears:  
+    If *Destination* does not contain an existing directory and does not end with a backslash (\\), the following message appears:  
     ```
     Does <Destination> specify a file name or directory name on the target(F = file, D = directory)?
     ```  
